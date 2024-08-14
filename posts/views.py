@@ -4,6 +4,7 @@ from django.views.generic import (
     CreateView
 )
 from .models import Post
+# from django.urls import reverse
 
 
 
@@ -19,6 +20,6 @@ class PostCreateView(CreateView):
     template_name = "posts/new.html"
     model = Post
     fields = ["title","subtitle","body"]
-
-################################################
+    # success_url = reverse("list")
+    
 
